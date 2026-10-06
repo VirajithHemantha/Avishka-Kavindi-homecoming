@@ -32,7 +32,7 @@ const INVITATION = {
 } as const;
 
 const backgroundMusic = "/ssstik.io_1791326090288.mp3";
-const googleScriptUrl = "https://script.google.com/macros/s/AKfycbwiv-SlaxoMXmHz7jhAJNmhST6eP0gnTPQKTC-Yqk_rfnlXK1tX3X6lLPZGZ7qm1cKj/exec";
+const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyYrX2U9396hqbu4SzWWhxdvq0Gq7ynpjsqFZcLdOd6_FA2-Ol1sDZVdnbdp8-2C9xu/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
@@ -200,9 +200,24 @@ export default function HomecomingInvitation() {
   const introVideoRef = React.useRef<HTMLVideoElement>(null);
 
   const searchParams = new URLSearchParams(window.location.search);
-  const guestPrefix = searchParams.get('prefix');
-  const guestName = searchParams.get('name');
-  const hasGuestInfo = guestPrefix && guestName;
+  let guestPrefix = searchParams.get('prefix');
+  let guestName = searchParams.get('name');
+
+  const pathName = window.location.pathname.substring(1);
+  if (!guestName && pathName && pathName !== 'admin') {
+    guestName = decodeURIComponent(pathName);
+    guestName = guestName.charAt(0).toUpperCase() + guestName.slice(1);
+  }
+
+  const hasGuestInfo = !!guestName;
+
+  const getGreeting = () => {
+    if (!guestName) return '';
+    if (!guestPrefix) return `Dear ${guestName}`;
+    if (guestPrefix === 'Dear') return `Dear ${guestName}`;
+    if (guestPrefix === 'Family') return `Dear ${guestName} and Family`;
+    return `Dear ${guestPrefix} ${guestName}`;
+  };
 
   const submitToGoogleSheet = async (payload: Record<string, string>) => {
     if (!googleScriptUrl) {
@@ -346,7 +361,7 @@ export default function HomecomingInvitation() {
                       transition={{ duration: 1, delay: 1 }}
                       className="mb-8 flex flex-col items-center"
                     >
-                      <p className="font-playball text-4xl md:text-5xl text-[#8B0000] drop-shadow-md mb-2">Dear {guestPrefix} {guestName}</p>
+                      <p className="font-playball text-4xl md:text-5xl text-[#D4AF37] drop-shadow-md mb-2">{getGreeting()}</p>
                       <p className="font-cinzel text-xs md:text-sm text-white/80 tracking-[0.2em] uppercase mt-2 drop-shadow-sm">We cordially invite you to</p>
                     </motion.div>
                   )}
@@ -436,6 +451,19 @@ export default function HomecomingInvitation() {
               {/* Content Container */}
               <div className="relative z-10 w-full max-w-lg px-6 py-12 flex flex-col items-center text-center">
                 
+                {hasGuestInfo && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1 }}
+                    className="mb-4 flex flex-col items-center"
+                  >
+                    <p className="font-playball text-3xl md:text-4xl text-[#D4AF37] drop-shadow-sm">
+                      {getGreeting()}
+                    </p>
+                  </motion.div>
+                )}
+
                 {/* Top Ornament */}
                 <motion.div
                   initial={{ opacity: 0, y: -20 }}
