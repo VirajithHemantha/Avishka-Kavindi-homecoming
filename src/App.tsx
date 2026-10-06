@@ -791,7 +791,7 @@ export default function HomecomingInvitation() {
                       </div>
                       <div className="flex-1">
                         <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Start</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">10:10 AM</div>
+                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">7:00 PM</div>
                       </div>
                     </div>
 
@@ -809,7 +809,7 @@ export default function HomecomingInvitation() {
                       </div>
                       <div className="flex-1">
                         <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Welcome</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">10:20 AM</div>
+                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">7:30 PM</div>
                       </div>
                     </div>
 
@@ -826,8 +826,8 @@ export default function HomecomingInvitation() {
                         <UtensilsCrossed className="w-6 h-6 md:w-8 md:h-8 text-[#D4AF37]" strokeWidth={1.5} />
                       </div>
                       <div className="flex-1">
-                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Lunch</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">12:45 PM</div>
+                        <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Dinner</div>
+                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">8:30 PM</div>
                       </div>
                     </div>
 
@@ -845,7 +845,7 @@ export default function HomecomingInvitation() {
                       </div>
                       <div className="flex-1">
                         <div className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] font-bold text-[#D4AF37] font-cinzel mb-2">Dancing Floor</div>
-                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">1:00 PM</div>
+                        <div className="text-xl md:text-3xl text-[#E0E0E0] font-cinzel font-light leading-tight">9:30 PM</div>
                       </div>
                     </div>
                   </div>
