@@ -9,20 +9,20 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-playball: "Playball", cursive;
 
-  --color-sage: #b19cd9;
-  /* Lavender Accent */
+  --color-sage: #8b0000;
+  /* Red Accent */
   --color-paper: #0a0a0a;
 
   --color-theme-50: #121212;
   --color-theme-100: #1a1a1a;
   --color-theme-200: #2a2a2a;
   --color-theme-300: #3a3a3a;
-  --color-theme-400: #b597ff;
-  --color-theme-500: #966dff;
-  --color-theme-600: #7950f2;
-  --color-theme-700: #6e39db;
-  --color-theme-800: #5c2eb8;
-  --color-theme-900: #4c2596;
+  --color-theme-400: #d4af37;
+  --color-theme-500: #b8972d;
+  --color-theme-600: #8b0000;
+  --color-theme-700: #730000;
+  --color-theme-800: #5c0000;
+  --color-theme-900: #420000;
 }
 
 :root {
@@ -73,8 +73,8 @@ body {
 
 .website-shell {
   background:
-    radial-gradient(circle at 10% 10%, rgba(177, 156, 217, 0.15), transparent 40%),
-    radial-gradient(circle at 90% 90%, rgba(121, 80, 242, 0.1), transparent 40%),
+    radial-gradient(circle at 10% 10%, rgba(139, 0, 0, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(212, 175, 55, 0.1), transparent 40%),
     radial-gradient(circle at 50% 20%, rgba(20, 20, 20, 0.8), transparent 50%),
     linear-gradient(135deg, #0a0a0a 0%, #121212 50%, #0a0a0a 100%);
 }
