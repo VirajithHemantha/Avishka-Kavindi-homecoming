@@ -337,7 +337,7 @@ export default function HomecomingInvitation() {
             <video
               ref={introVideoRef}
               src="/intro_video.mp4"
-              muted={!hasStarted}
+              muted={true}
               playsInline
               preload="auto"
               className={`w-full h-full object-cover transition-all duration-[2000ms] ease-out ${!hasStarted ? "blur-xl scale-110 opacity-60" : "blur-0 scale-100 opacity-100"
@@ -379,9 +379,11 @@ export default function HomecomingInvitation() {
                     onClick={() => {
                       setHasStarted(true);
                       if (introVideoRef.current) {
-                        introVideoRef.current.muted = false;
                         introVideoRef.current.currentTime = 0;
                         introVideoRef.current.play();
+                      }
+                      if (audioRef.current) {
+                        audioRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
                       }
                     }}
                     className="group relative px-12 py-5 overflow-hidden rounded-full transition-all duration-500 hover:scale-105 active:scale-95"
