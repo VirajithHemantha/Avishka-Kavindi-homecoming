@@ -5,25 +5,25 @@ import { FlyingButterflies } from "./FlyingButterflies";
 
 const INVITATION = {
   couple: {
-    bride: "Harindya",
-    groom: "Akash",
-    brideFull: "Harindya Ekanayake",
-    groomFull: "Akash Bandara",
+    bride: "Kavindi",
+    groom: "Avishka",
+    brideFull: "Kavindi",
+    groomFull: "Avishka",
   },
   date: {
-    displayNumeric: "23 . 01 . 2027",
-    displayLong: "January 23",
-    countdownTarget: "January 23, 2027 09:00:00",
+    displayNumeric: "24 . 01 . 2027",
+    displayLong: "January 24",
+    countdownTarget: "January 24, 2027 19:00:00",
   },
   time: {
-    ceremony: "Morning to evening",
-    reception: "Lunch",
+    ceremony: "7:00 PM to 11:30 PM",
+    reception: "Evening",
   },
   venue: {
-    name: "Royal Rest House, Peradeniya",
-    city: "Peradeniya",
-    mapQuery: "Royal Rest House, Peradeniya",
-    googleMapsLink: "https://maps.google.com/?q=Royal+Rest+House,+Peradeniya",
+    name: "GRANDEEZA Hotel Negambo",
+    city: "Negambo",
+    mapQuery: "Grandeeza Hotel, Negombo",
+    googleMapsLink: "https://maps.google.com/?q=Grandeeza+Hotel,+Negombo",
   },
   rsvpContacts: [
     "Mihiri: 0719471462",
@@ -31,12 +31,12 @@ const INVITATION = {
   ],
 } as const;
 
-const backgroundMusic = "/Nim Him Sewwa  Romantic Live Violin & Piano Cover  Shahen Thilakaratne.mp3";
+const backgroundMusic = "/ssstik.io_1791326090288.mp3";
 const googleScriptUrl = "https://script.google.com/macros/s/AKfycbwiv-SlaxoMXmHz7jhAJNmhST6eP0gnTPQKTC-Yqk_rfnlXK1tX3X6lLPZGZ7qm1cKj/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
-const HERO_BACKGROUND_IMAGE = publicImagePath("1 (1).jpg");
+const HERO_BACKGROUND_IMAGE = "/Gemini_Generated_Image_evljdxevljdxevlj.jpg";
 const FEATURED_COUPLE_IMAGE = publicImagePath("1 (7).jpg");
 
 function FloatingPetals() {
@@ -550,7 +550,7 @@ export default function HomecomingInvitation() {
             <div className="relative w-full bg-[#0A0A0A]">
               
             {/* Homecoming Details Section */}
-            <section id="details" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/bg.png")' }}>
+            <section id="details" className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-cover bg-center" style={{ backgroundImage: 'url("/Gemini_Generated_Image_77jcge77jcge77jc.jpg")' }}>
 
               {/* Content Container */}
               <div className="relative z-10 w-full max-w-lg px-6 py-16 flex flex-col items-center text-center">
@@ -592,8 +592,9 @@ export default function HomecomingInvitation() {
                     <div className="absolute inset-0 border border-[#D4AF37]/30" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
                     <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
                     
-                    <div className="py-6 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>MR. & MRS. EKANAYAKE</span>
+                    <div className="py-6 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed text-center">
+                      <span className="uppercase text-[10px] md:text-xs">MR. K.D. AJITH PUSHPA KUMARA</span>
+                      <span className="uppercase text-[10px] md:text-xs">& MRS. M.A ORIN DILRUKSHI</span>
                     </div>
                   </div>
 
@@ -631,8 +632,9 @@ export default function HomecomingInvitation() {
                     <div className="absolute inset-0 border border-[#D4AF37]/30" style={{ clipPath: 'polygon(15px 0, calc(100% - 15px) 0, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0 calc(100% - 15px), 0 15px)' }}></div>
                     <div className="absolute inset-1 border border-[#D4AF37]/20 pointer-events-none" style={{ clipPath: 'polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px)' }}></div>
                     
-                    <div className="py-5 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed">
-                      <span>MR. & MRS. BANDARA</span>
+                    <div className="py-5 px-4 flex flex-col items-center justify-center text-[#FFFFFF] font-cinzel text-xs md:text-sm tracking-[0.1em] relative z-10 font-bold leading-relaxed text-center">
+                      <span className="uppercase text-[10px] md:text-xs">MR. G ANURA WASANTHA KUMARA</span>
+                      <span className="uppercase text-[10px] md:text-xs">& MRS. Y.R SURANGA RUKMALI</span>
                     </div>
                   </div>
 
@@ -658,9 +660,9 @@ export default function HomecomingInvitation() {
 
                   {/* Couple Names Inline */}
                   <div className="flex items-center justify-center gap-6 mb-6">
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">HARINDYA</span>
+                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.bride.toUpperCase()}</span>
                     <span className="font-playball text-4xl md:text-6xl text-[#D4AF37] mt-1">&</span>
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">AKASH</span>
+                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.groom.toUpperCase()}</span>
                   </div>
 
                   {/* Bottom Ornament */}
