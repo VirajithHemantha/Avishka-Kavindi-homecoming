@@ -31,7 +31,7 @@ const INVITATION = {
   ],
 } as const;
 
-const backgroundMusic = "/ssstik.io_1791326090288.mp3";
+const backgroundMusic = "/ssstik.io_1791328612462.mp3";
 const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyYrX2U9396hqbu4SzWWhxdvq0Gq7ynpjsqFZcLdOd6_FA2-Ol1sDZVdnbdp8-2C9xu/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
@@ -372,7 +372,7 @@ export default function HomecomingInvitation() {
                     className={hasGuestInfo ? "mb-8" : "mb-12"}
                   >
                     <h2 className="font-playball text-4xl md:text-6xl text-white mb-2 drop-shadow-2xl">Homecoming Ceremony</h2>
-                    <p className="font-cinzel text-2xl md:text-4xl text-[#D4AF37] tracking-[0.2em] md:tracking-[0.3em] uppercase drop-shadow-lg mt-4">{INVITATION.couple.bride} & {INVITATION.couple.groom}</p>
+                    <p className="font-cinzel text-2xl md:text-4xl text-[#D4AF37] tracking-[0.2em] md:tracking-[0.3em] uppercase drop-shadow-lg mt-4">{INVITATION.couple.groom} & {INVITATION.couple.bride}</p>
                   </motion.div>
 
                   <button
@@ -511,13 +511,13 @@ export default function HomecomingInvitation() {
                   className="flex flex-col items-center"
                 >
                   <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#FFFFFF] leading-none drop-shadow-sm">
-                    {INVITATION.couple.bride}
+                    {INVITATION.couple.groom}
                   </h1>
                   <span className="font-playball text-4xl md:text-6xl text-[#FFFFFF] my-2 drop-shadow-sm">
                     &
                   </span>
                   <h1 className="font-playball text-[5.5rem] md:text-9xl text-[#FFFFFF] leading-none drop-shadow-sm">
-                    {INVITATION.couple.groom}
+                    {INVITATION.couple.bride}
                   </h1>
                 </motion.div>
                 
@@ -690,9 +690,9 @@ export default function HomecomingInvitation() {
 
                   {/* Couple Names Inline */}
                   <div className="flex items-center justify-center gap-6 mb-6">
-                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.bride.toUpperCase()}</span>
-                    <span className="font-playball text-4xl md:text-6xl text-[#D4AF37] mt-1">&</span>
                     <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.groom.toUpperCase()}</span>
+                    <span className="font-playball text-4xl md:text-6xl text-[#D4AF37] mt-1">&</span>
+                    <span className="font-cinzel text-xl md:text-3xl text-[#FFFFFF] tracking-[0.2em] font-bold">{INVITATION.couple.bride.toUpperCase()}</span>
                   </div>
 
                   {/* Bottom Ornament */}
@@ -1442,7 +1442,7 @@ export default function HomecomingInvitation() {
 
                 {/* Copyright Text */}
                 <p className="text-[#E0E0E0] text-[9px] md:text-xs tracking-[0.6em] font-cinzel uppercase font-bold mb-2">
-                  © 2026 {INVITATION.couple.bride} & {INVITATION.couple.groom}
+                  © 2026 {INVITATION.couple.groom} & {INVITATION.couple.bride}
                 </p>
 
                 {/* Promo Text */}
