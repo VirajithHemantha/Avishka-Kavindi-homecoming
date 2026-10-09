@@ -26,13 +26,12 @@ const INVITATION = {
     googleMapsLink: "https://maps.google.com/?q=Grandeeza+Hotel,+Negombo",
   },
   rsvpContacts: [
-    "Mihiri: 0719471462",
-    "Suneth: 0717987004",
+    "Kavindi: 0771385079",
   ],
 } as const;
 
 const backgroundMusic = "/ssstik.io_1791328612462.mp3";
-const googleScriptUrl = "https://script.google.com/macros/s/AKfycbyYrX2U9396hqbu4SzWWhxdvq0Gq7ynpjsqFZcLdOd6_FA2-Ol1sDZVdnbdp8-2C9xu/exec";
+const googleScriptUrl = "https://script.google.com/macros/s/AKfycbxjT5eiu6fthFt73i5F5d8Y9DZ6XharSZUcWha3iubDm_7vybn3_PsME5qvB5RWghE/exec";
 
 const publicImagePath = (fileName: string) => `/images/${fileName.replaceAll(" ", "%20")}`;
 
@@ -1184,7 +1183,7 @@ export default function HomecomingInvitation() {
                           type="button"
                           onClick={() => {
                             setRsvpStatus("idle");
-                            setRsvpForm((prev) => ({ ...prev, guests: "1" }));
+                            setRsvpForm((prev) => ({ ...prev, guests: prev.guests === "0" ? "1" : prev.guests }));
                           }}
                           className={`relative w-full bg-[#1A1A1A] hover:bg-[#111111] text-[#E0E0E0] py-4 rounded-2xl font-cinzel text-xs md:text-sm tracking-wide transition-all shadow-[0_4px_10px_rgba(212,175,55,0.1)] flex items-center px-4 md:px-6 overflow-hidden ${rsvpForm.guests !== "0" ? "border-2 border-[#D4AF37] scale-[1.02]" : "border border-[#D4AF37]/30"}`}
                         >
@@ -1209,6 +1208,40 @@ export default function HomecomingInvitation() {
                         </button>
                       </div>
                     </div>
+
+                    <AnimatePresence>
+                      {rsvpForm.guests !== "0" && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          className="space-y-3 overflow-hidden"
+                        >
+                          <label className="text-sm md:text-base font-cinzel text-[#E0E0E0] ml-1">Number of Guests</label>
+                          <div className="relative">
+                            <select
+                              value={rsvpForm.guests}
+                              onChange={(e) => {
+                                setRsvpStatus("idle");
+                                setRsvpForm((prev) => ({ ...prev, guests: e.target.value }));
+                              }}
+                              className="w-full bg-[#1A1A1A] border border-[#D4AF37]/50 rounded-xl px-5 py-4 text-[#E0E0E0] focus:outline-none focus:border-[#D4AF37] transition-all font-cinzel text-sm appearance-none"
+                              required
+                            >
+                              {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(num => (
+                                <option key={num} value={num} className="bg-[#1A1A1A] text-[#E0E0E0]">
+                                  {num} {num === 1 ? 'Guest' : 'Guests'}
+                                </option>
+                              ))}
+                            </select>
+                            <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none flex items-center gap-2">
+                              <User className="w-4 h-4 text-[#D4AF37]" />
+                              <ChevronDown className="w-4 h-4 text-[#D4AF37]" />
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
 
                     {(rsvpStatus === "success" || rsvpStatus === "error") && (
                       <p className={`text-[10px] text-center font-semibold uppercase tracking-wider ${rsvpStatus === "success" ? "text-emerald-500" : "text-red-500"}`}>
